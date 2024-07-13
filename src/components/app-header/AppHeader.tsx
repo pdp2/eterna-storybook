@@ -66,13 +66,13 @@ const rightNavItems: NavItem[] = [
 
 const NavItem = (props: NavItemProps) => {
   const { item, item: { uppercase = true } } = props;
-  return <li><a href={item.url} className={cx('text-white', { uppercase: uppercase })}>{item.label}</a></li>
+  return <li className="whitespace-nowrap"><a href={item.url} className={cx('text-white', { uppercase: uppercase })}>{item.label}</a></li>
 }
 
 const Nav = (props: NavProps) => {
   const { items } = props;
   return (
-    <nav>
+    <nav className="flex-auto flex justify-end">
       <ul className="flex gap-8">
         {items.map((item, index) => <NavItem item={item} key={`nav-item-${index}`} />)}
       </ul>
