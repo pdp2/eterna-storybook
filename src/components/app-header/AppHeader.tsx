@@ -73,7 +73,7 @@ const Nav = (props: NavProps) => {
   const { items } = props;
   return (
     <nav className="flex-auto flex justify-end">
-      <ul className="flex gap-8">
+      <ul className="flex flex-wrap gap-8">
         {items.map((item, index) => <NavItem item={item} key={`nav-item-${index}`} />)}
       </ul>
     </nav>
